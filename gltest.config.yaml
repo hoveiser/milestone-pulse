@@ -1,0 +1,9 @@
+paths:
+  contracts: contracts/
+  artifacts: artifacts/
+
+networks:
+  default: studionet
+  studionet:
+    accounts:
+      - "${GENLAYER_PRIVATE_KEY}"

@@ -1,0 +1,5 @@
+# Normalize line endings so local, GitHub and on-chain contract bytes match.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary

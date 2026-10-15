@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 50% -10%, #141a3d 0%, #070b1c 60%);
+  color: #e6ecff;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(20, 27, 61, 0.72), rgba(10, 15, 36, 0.72));
+  border: 1px solid #1e2a5c;
+  backdrop-filter: blur(6px);
+}
+
+.tabnum {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes steppulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+.step-active {
+  animation: steppulse 1.1s ease-in-out infinite;
+}

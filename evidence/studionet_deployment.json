@@ -1,0 +1,123 @@
+{
+  "project": "MilestonePulse",
+  "network": "studionet",
+  "chain_id": 61999,
+  "rpc_url": "https://studio.genlayer.com/api",
+  "contract_address": "0x8eB47337e7A5De713D3358555CD35521063C0aDD",
+  "explorer_contract_url": "https://genlayer-explorer.vercel.app/address/0x8eB47337e7A5De713D3358555CD35521063C0aDD",
+  "deploy_tx_hash": "0x8ab167c1897cffef9aa21f3e47c0a095ad1887d17001cd12b4951d8ebeed8816",
+  "primary_signer": "0x3de43AA2f7162c80af98abe78222aE0Cdf83c506",
+  "burner_signer": "0xab44C31d1C8073567215E2AD2d80d97B9802F76A",
+  "runner_header": "# { \"Depends\": \"py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6\" }",
+  "recorded_at_utc": "2026-10-15T17:11:37Z",
+  "scenario_complete": [
+    "claim",
+    "evidence_submit",
+    "evidence_upvote",
+    "markets",
+    "pos_b_full",
+    "resolve",
+    "rollback"
+  ],
+  "three_way_sha256": {
+    "local_file": "6a948b25cd17904708a184af5f2e5bff5137321e3b5f681d34b7f2227607ab17",
+    "deployed_submitted_code": "6a948b25cd17904708a184af5f2e5bff5137321e3b5f681d34b7f2227607ab17",
+    "git_index_blob": "6a948b25cd17904708a184af5f2e5bff5137321e3b5f681d34b7f2227607ab17",
+    "match": true,
+    "note": "eth_getCode returns empty for GenLayer contracts and the explorer code API was unavailable; identity is proven by local file == bytes submitted in the deploy tx == git index blob."
+  },
+  "seeded_state": {
+    "market_a": {
+      "creator": "0x3de43AA2f7162c80af98abe78222aE0Cdf83c506",
+      "evidence_count": 1,
+      "mandatory_deliverable_token": "zk-proofs",
+      "market_id": 1,
+      "milestone_commitment": "Ship trustless ZK proof pipeline with public audit by Q2.",
+      "official_proof_url": "https://roadmap.zkcascade.io/milestones/zk-prover",
+      "pool_full_ship": 0,
+      "pool_partial_ship": 200,
+      "pool_vaporware": 120,
+      "position_count": 2,
+      "project_name": "ZK Cascade Prover",
+      "resolution_summary": "Delivered pipeline skeleton, zk-proofs artifact absent.",
+      "status": "RESOLVED",
+      "total_staked": 320,
+      "verified_completion_pct": 55,
+      "winning_band": "PARTIAL_SHIP"
+    },
+    "pulse_summary": {
+      "cancelled_markets": 0,
+      "full_ship_outcomes": 0,
+      "open_markets": 1,
+      "partial_ship_outcomes": 1,
+      "resolved_markets": 1,
+      "total_evidences": 1,
+      "total_markets": 2,
+      "total_positions": 3,
+      "total_volume_staked": 470,
+      "vaporware_outcomes": 0
+    },
+    "leaderboard": [
+      {
+        "forecaster": "0x3de43AA2f7162c80af98abe78222aE0Cdf83c506",
+        "points": 340
+      },
+      {
+        "forecaster": "0xab44C31d1C8073567215E2AD2d80d97B9802F76A",
+        "points": 20
+      }
+    ],
+    "invariant_pools_equal_total_staked": true
+  },
+  "transactions": [
+    {
+      "label": "position FULL_SHIP on 2",
+      "method": "take_forecast_position",
+      "tx_hash": "0x0b26bec3a1dde83a5fd4a331d58f55f6637ed061800913ac15287d693d4d50ba",
+      "lifecycle_status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "as_expected": true
+    },
+    {
+      "label": "submit evidence A (burner)",
+      "method": "submit_evidence_dossier",
+      "tx_hash": "0x063f082660f81968e1a585e271d66ad450ed260858229555fc666bb46a3d035b",
+      "lifecycle_status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "as_expected": true
+    },
+    {
+      "label": "upvote evidence A (primary)",
+      "method": "upvote_evidence",
+      "tx_hash": "0x10c22d3ba27e4cf35f6e8ef07ea6884316f27f05179847d1fecf0bd956e094fd",
+      "lifecycle_status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "as_expected": true
+    },
+    {
+      "label": "resolve A deterministic",
+      "method": "resolve_market_deterministic",
+      "tx_hash": "0xd12e0a0a7670a39b0fd8cd9228e05204dd2fc47753ce265698dca7183577e22c",
+      "lifecycle_status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "as_expected": true
+    },
+    {
+      "label": "claim payout pos 1",
+      "method": "claim_position_payout",
+      "tx_hash": "0x7037e651af65de46401fb67869320e6cb337da1fc3309e6caf49465458203a90",
+      "lifecycle_status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "as_expected": true
+    },
+    {
+      "label": "rollback check: evidence on resolved market",
+      "method": "submit_evidence_dossier",
+      "tx_hash": "0x08fae531bb14520b3107a9939ef701f07d7cf1621b5de2f3b51e71368d5df6a6",
+      "lifecycle_status": "FINALIZED",
+      "execution_result": "ERROR",
+      "as_expected": true
+    }
+  ],
+  "all_transactions_finalized_ok": true
+}

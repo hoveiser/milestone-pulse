@@ -1,0 +1,34 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local deploy checkpoint holds a throwaway burner key; never commit it
+evidence/_checkpoint.json
+
+# Dependencies / build
+node_modules/
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# GenLayer artifacts / caches
+artifacts/
+.gltest_cache/
+genlayer-cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
